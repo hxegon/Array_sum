@@ -1,21 +1,15 @@
 #!/usr/bin/ruby
-puts "input folder where dicts, dumps, etc are:"
-dir_arr = `ls #{gets.chomp}`.split
-#origin_path = gets.chomp
-#dir_arr = `ls #{origin_path}`.split
-#dir_arr = dir_arr.map do |file|
-#    file = origin_path + file
-#end
+# by Cooper LeBrun
+# no syntactic errors at this version
+dir_arr = Dir.glob("*.txt")  #=> ["array", "of.txt", "files_NAMES']
 output_hash = {}
 dir_arr.each do |list|
-    list = File.open(list, 'r')
-    list.each do |line|
-        if output_hash.keys.include? line.chomp == False
+    File.foreach(list, 'r') do |line|
+        if (output_hash.keys.include? line.chomp) == false
             output_hash.merge(line.chomp => 0)
         else
             output_hash[line.chomp] += 1
         end
-    list.close
     end
 end
 #puts output_hash
@@ -35,6 +29,7 @@ output_hash = output_hash.each do |arr|
         arr = "#{arr[0]}"
     end
 end
+output_hash = output_hash.compact 
 #puts output_hash
 puts "enter output dir:"
 output_file = File.open(gets.chomp, 'w')
