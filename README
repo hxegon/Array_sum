@@ -1,3 +1,7 @@
 This is a simple tool to generate a dictionary of passwords from other dictionaries you input and sorted by frequency.
 make sure that you give the file execute privs before trying it. (chmod +x whatever)
 this program also taught me the importance of repositories.
+
+
+#version 0.1
+no syntactic errors, but the output file is blank

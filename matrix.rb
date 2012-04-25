@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 # by Cooper LeBrun
 # no syntactic errors at this version
+# but output is blank
 dir_arr = Dir.glob("*.txt")  #=> ["array", "of.txt", "files_NAMES']
 output_hash = {}
 dir_arr.each do |list|
