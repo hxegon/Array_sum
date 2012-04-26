@@ -19,20 +19,10 @@ output_hash.each do |key, value|
         output_hash.delete(key)
     end
 end
-output_hash
-output_hash = output_hash.to_a
-output_hash = output_hash.each do |arr|
-    if arr[1] == 0
-        arr = nil
-    else
-        arr = "#{arr[0]}"
-    end
-end
+output_hash.each { |pair| if pair == 0; pair = nil }
 output_hash = output_hash.compact
 puts "enter output dir:"
 output_file = File.open(gets.chomp, 'w')
-output_hash.each do |string|
-    output_file.print(string)
-end
+output_hash.keys.each { |string| output_file.print(string) }
 output_file.close
 puts "Done!"
