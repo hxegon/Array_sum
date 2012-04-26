@@ -1,0 +1,11 @@
+password1
+password2
+password3
+password4
+password1
+password2
+nonfrequent1
+nonfrequent2
+nofreq
+disfreq
+unfrequent
