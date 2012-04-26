@@ -23,6 +23,8 @@ output_hash.each { |pair| if pair == 0; pair = nil }
 output_hash = output_hash.compact
 puts "enter output dir:"
 output_file = File.open(gets.chomp, 'w')
-output_hash.keys.each { |string| output_file.print(string) }
+output_hash.keys.each do |string| 
+    output_file.print(string)
+end
 output_file.close
 puts "Done!"
