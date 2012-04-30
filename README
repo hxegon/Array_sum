@@ -4,5 +4,5 @@ make sure that you give the file execute privs before trying it. (chmod +x whate
 this program also taught me the importance of repositories.
 
 
-#version 0.3
-output still incorrect
+#version 1
+first functional release
