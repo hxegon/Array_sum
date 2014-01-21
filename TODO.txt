@@ -1,8 +1,0 @@
--Add batch loading
-
--make it print metrics
-    -how many passwords were in the starting list and how many it ended with in output list
-    -maybe have these outputed to a file such as "#{filename}_notes.txt"
-
--give an option to automatically generate an appropriate filename
-    -such as; "#{number_of_passwords}_pass_list.txt"
