@@ -39,6 +39,16 @@ describe Frequency do
       @f.words.should == @word_list
     end
   end
+
+  describe '#index' do
+    it 'returns an empty hash if there are no words' do
+      @f_new.index.should be_empty
+    end
+
+    it 'returns a frequency if there are words' do
+      @f.index[:something]
+      @f.index[:hello]
+      @f.index[:world]
     end
   end
 

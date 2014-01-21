@@ -10,4 +10,12 @@ class Frequency
     @words != ""
   end
 
+  def index
+    @index = Hash.new(0)
+    @words.split("\n").each do |word|
+      @index[word.to_sym] += 1
+    end
+    @index
+  end
+
 end
