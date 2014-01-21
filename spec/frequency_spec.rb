@@ -20,7 +20,7 @@ describe Frequency do
     @f = Frequency.new :list => @word_list
   end
 
-  describe '#words?' do
+  describe '#has_words?' do
     it 'returns true if there are words' do
       @f.has_words?.should == true
     end
@@ -31,11 +31,14 @@ describe Frequency do
   end
 
   describe '#words' do
-    it 'will return an empty hash if there are no words' do
-      @f_new.words.should == {}
+    it 'returns an empty string if there are no words' do
+      @f_new.words.should == ""
     end
 
-    xit 'will return an frequency if there are words' do
+    it 'returns words if there are words' do
+      @f.words.should == @word_list
+    end
+  end
     end
   end
 
