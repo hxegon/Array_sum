@@ -5,18 +5,13 @@ describe Frequency do
   describe '#new' do
     # Am i testing ruby at this point?
     it 'can take no arguments' do
-      lambda { Frequency.new }.should_not raise_exception ArgumentError
+      expect { Frequency.new }.not_to raise_exception
     end
 
-    # custom wordlist object?
+    # or a custom wordlist object?
     it 'can take a word list' do
-      lambda { Frequency.new :list => "some\nwords" }.should_not raise_exception ArgumentError
+      expect { Frequency.new :list => "some\nwords" }.not_to raise_exception
     end
-
-    # make it take a file object?
-    #it 'can take a filename' do
-    #  lambda { Frequency.new :file => "spec/file_test" }.should_not raise_exception ArgumentError
-    #end
   end
 
   before do
