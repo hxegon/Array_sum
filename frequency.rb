@@ -1,12 +1,13 @@
 class Frequency
+
   def initialize args = {}
-    !args[:list].nil? ? @words = args[:list] : @words = {}
+    !args[:list].nil? ? @words = args[:list] : @words = ""
   end
 
   attr_reader :words
 
   def has_words?
-    @words != {}
+    @words != ""
   end
 
 end
