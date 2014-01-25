@@ -1,1 +1,1 @@
-require_relative '../word_frequency.rb'
+require_relative '../array_sum.rb'
