@@ -5,14 +5,20 @@ class Array_Sum
   def initialize *arrays
     @raw_items = arrays.flatten
     @sum = Hash.new(0)
-    @raw_items.each do |item|
-        @sum[item] += 1
-    end
+    set_sum @raw_items
   end
 
   def << *arrays
-    @raw_items << arrays.flatten
+    array = arrays.flatten!
+    @raw_items << arrays
     @raw_items.flatten!
+    set_sum array
+  end
+
+  def set_sum array
+    array.each do |item|
+        @sum[item] += 1
+    end
   end
 
 end

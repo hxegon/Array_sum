@@ -37,10 +37,19 @@ describe Array_Sum do
   end
 
   describe '#<<' do
-    it 'sets raw items correctly' do
+
+    before do
       @a = Array_Sum.new @items_a
-      expect { @a << %w[more new words] }.not_to raise_error
+      @a << %w[more new words]
+    end
+
+    it 'sets #raw_items correctly' do
       @a.raw_items.should == [@items_a, %w[more new words]].flatten
+    end
+
+    it 'sets #sum correctly' do
+      @a.sum.should == { 'someitems' => 2, 'are' => 2, 'in' => 2, 'this' => 1, 
+                         'array' => 1, 'more' => 1, 'new' => 1, 'words' => 1 }
     end
   end
 
