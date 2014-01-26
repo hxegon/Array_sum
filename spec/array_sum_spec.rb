@@ -33,6 +33,15 @@ describe Array_Sum do
       Array_Sum.new(@items_a).raw_items.should == @items_a
       Array_Sum.new(@items_a, @items_a).raw_items.should == [@items_a, @items_a].flatten
     end
+
+  end
+
+  describe '#<<' do
+    it 'sets raw items correctly' do
+      @a = Array_Sum.new @items_a
+      expect { @a << %w[more new words] }.not_to raise_error
+      @a.raw_items.should == [@items_a, %w[more new words]].flatten
+    end
   end
 
   describe '#sum' do
